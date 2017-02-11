@@ -215,7 +215,7 @@ class MapMyPostsAdmin {
 		
 		$screen = get_current_screen();
 		// load css for views/edit-terms.php
-		if ( $screen->id == 'edit-category' || $screen->id == 'edit-post_tag' ) {
+		if ( $screen->id == 'edit-category' || $screen->id == 'edit-post_tag' || $screen->id == 'edit-city' ) {
 			wp_enqueue_style( MAPMYPOSTS_PLUGIN_SLUG .'-edit-terms', MAPMYPOSTS_URL . 'css/edit-terms.css', MAPMYPOSTS_VERSION );
 		}
 		// load css for settings page
@@ -244,7 +244,7 @@ class MapMyPostsAdmin {
 		
 		$screen = get_current_screen();
 		// load jsapi in header and load gmaps/geodecoder for use with views/edit-terms.php
-		if ( $screen->id == 'edit-category' || $screen->id == 'edit-post_tag' ) {
+		if ( $screen->id == 'edit-category' || $screen->id == 'edit-post_tag' || $screen->id == 'edit-city' ) {
 			wp_enqueue_script( 'google-jsapi', MAPMYPOSTS_REQUEST_PROTOCOL . 'www.google.com/jsapi' . MapMyPosts::get_api_key('?key='), array(), null );
 			wp_enqueue_script( MAPMYPOSTS_PLUGIN_SLUG . '-admin-geocoder-script', MAPMYPOSTS_URL . 'js/admin-geocoder.js', array( 'jquery' ), MAPMYPOSTS_VERSION . '111' );
 			$translate_array = array(
@@ -375,6 +375,24 @@ class MapMyPostsAdmin {
 		}
 		update_option( MAPMYPOSTS_OPTION_PREFIX . '_post_tag_country_list', $country_list );
 		update_option( MAPMYPOSTS_OPTION_PREFIX . '_post_tag_marker_list', $marker_list );
+        
+        
+        // repeat same process for the cities
+		$country_list = array();
+		$marker_list = array();
+		$terms = get_terms( 'city', 'hide_empty=0' );
+		foreach ( $terms as $obj ) {
+			$data = $this->get_cache_term( $obj->term_id, $obj->taxonomy );
+			if ( $data['country'] ) {
+				// should we assign to parent category country if that exists?
+				$country_list[$obj->term_id] = $data['country'];
+			}
+			if ( is_numeric( $data['lat'] ) && is_numeric( $data['lng'] ) ) {
+				$marker_list[$obj->term_id] = $data['lat'] . ',' . $data['lng'];
+			}
+		}
+		update_option( MAPMYPOSTS_OPTION_PREFIX . '_city_country_list', $country_list );
+		update_option( MAPMYPOSTS_OPTION_PREFIX . '_city_marker_list', $marker_list );
 	}
 	
 } // end of MapMyPostsAdmin class

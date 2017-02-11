@@ -304,8 +304,10 @@ class MapMyPosts {
 		$taxonomy = strtolower( $taxonomy );
 		if ( $taxonomy == 'category' ) {
 			$key .= '_category';
-		} else {
+		} elseif ( $taxonomy == 'post_tag' ) {
 			$key .= '_post_tag';
+		} elseif ( $taxonomy == 'city' ) {
+			$key .= '_city';
 		}
 		$mode = strtolower( $mode );
 		if ( $mode == 'region' ) {
@@ -341,7 +343,7 @@ class MapMyPosts {
 		}
 		$taxonomy = strtolower( $taxonomy );
 		if ( $taxonomy != 'category' ) {
-			$taxonomy = 'post_tag';
+			$taxonomy = 'city';
 		}
 		if ( !is_numeric( $parent ) ) {
 			$parent_obj = get_term_by('slug', $parent, $taxonomy);
