@@ -1,0 +1,122 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "Map My Posts"
+msgstr ""
+
+#. Short description.
+msgid "Map My Posts allows you to display a Google Map or Geochart visualization, associating map locations with your existing categories or tags."
+msgstr ""
+
+#. Screenshot description.
+msgid "Define a country or search for a specific place when adding or editing categories and tags."
+msgstr ""
+
+#. Screenshot description.
+msgid "The Geochart Widget will show your category or tag name and the post count on mouse hover."
+msgstr ""
+
+#. Screenshot description.
+msgid "Full control of Google Map types and controls."
+msgstr ""
+
+#. Screenshot description.
+msgid "Maps and Geocharts can be added to any post or page using the shortcodes."
+msgstr ""
+
+#. Found in description list item.
+msgid "3 map types available: Google Maps, Google Static Maps (PNG image), and Geochart Visualizations."
+msgstr ""
+
+#. Found in description list item.
+msgid "Embed maps on any page using the shortcodes &#091;mmp-map&#093;, &#091;mmp-staticmap&#093;, and &#091;mmp-geochart&#093;"
+msgstr ""
+
+#. Found in description list item.
+msgid "Associate with a country or any specific map location."
+msgstr ""
+
+#. Found in description list item.
+msgid "Map My Posts uses existing category or tag names to help define country associations."
+msgstr ""
+
+#. Found in description list item.
+msgid "Widgets available to display maps in the sidebar."
+msgstr ""
+
+#. Found in description list item.
+msgid "Full control over size, colors, and click functions."
+msgstr ""
+
+#. Found in description list item.
+msgid "Perfect for travel bloggers, touring musicians, or anyone else that wants to Map My Posts!"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "With Map My Posts, you can easily create maps plotting the location of your posts, based upon your existing tags or categories."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "<strong>Get Help</strong>"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Please leave a message on <a href=\"http://wordpress.org/support/plugin/map-my-posts\">the wordpress.org support forum for Map My Posts</a>"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Wordpress 3.0 or higher"
+msgstr ""
+
+#. Found in installation list item.
+msgid "PHP 5.1.2 or higher"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Download Map My Posts to <code>/wp-content/plugins/</code> directory and activate plugin."
+msgstr ""
+
+#. Found in installation list item.
+msgid "There is a courtesy limit of 25,000 Google Maps and Google Static Map requests per day. Google API keys are available through the <a href=\"https://code.google.com/apis/console\">APIs console</a>"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Under Posts-&gt;Categories or Posts-&gt;Tags, associate your existing taxonomy with locations. You can also add new categories or tags with locations for Map My Posts in this area."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Add one of the Map My Posts widgets to the sidebar, if desired."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Edit a post or page and add a Map My Posts shortcode."
+msgstr ""
+
+#. Found in installation paragraph.
+msgid "<strong>Requirements</strong>"
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "Adjusted admin permissions. Spanish translation thanks to <a href=\"http://www.webhostinghub.com/\">Web Hosting Hub</a>!"
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "Fixed bug: shortcode not appearing in correct location on pages and posts."
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "Included POT file for plugin translation."
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "Removed assets directory from plugin package to reduce filesize."
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "Initial public release."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "More information is available at the <a href=\"http://www.aroundthisworld.com/map-my-posts-wordpress-plugin/\">Map My Posts guide</a> on <a href=\"http://www.aroundthisworld.com\">Around This World</a>."
+msgstr ""
