@@ -1,4 +1,4 @@
-google.load('maps', '3', {other_params: 'sensor=false'});
+google.load('maps', '3', {other_params: 'sensor=false&key=AIzaSyCqQBt6kmG65K1RHBiAchXzX0o8i_lD-F0'});
 
 jQuery(document).ready(function($) {
 	var geocoder;

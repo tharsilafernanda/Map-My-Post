@@ -58,6 +58,7 @@
 				<select name="<?php echo $settings_key; ?>[taxonomy]" id="<?php echo $settings_key; ?>_taxonomy">
 					<option value="category" <?php selected('category', $settings['taxonomy']); ?>><?php _e('Categories', 'map-my-posts'); ?></option>
 					<option value="post_tag" <?php selected('post_tag', $settings['taxonomy']); ?>><?php _e('Tags', 'map-my-posts'); ?></option>
+					<option value="city" <?php selected('city', $settings['taxonomy']); ?>><?php _e('Cities', 'map-my-posts'); ?></option>
 				</select>
 			</td>
 		</tr>
