@@ -392,7 +392,7 @@ class MapMyPostsAdmin {
 			}
 		}
 		update_option( MAPMYPOSTS_OPTION_PREFIX . '_city_country_list', $country_list );
-		update_option( MAPMYPOSTS_OPTION_PREFIX . '_city_marker_list', $marker_list );
+		update_option( MAPMYPOSTS_OPTION_PREFIX . '_city_marker_list_'.ICL_LANGUAGE_CODE, $marker_list );
 	}
 	
 } // end of MapMyPostsAdmin class
