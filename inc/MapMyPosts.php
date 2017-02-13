@@ -313,7 +313,7 @@ class MapMyPosts {
 		if ( $mode == 'region' ) {
 			$key .= '_country_list';
 		} else {
-			$key .= '_marker_list';
+			$key .= '_marker_list_'.ICL_LANGUAGE_CODE;
 		}
 		
 		$cache_list = get_option( $key );
@@ -360,10 +360,12 @@ class MapMyPosts {
 		// note if more than one term share the same country or lat/lng, only show the one with more posts
 		// pad_counts=1 adds child category posts to count
 		// $cats = get_terms( $taxonomy, 'taxonomy='.$taxonomy.'&hide_empty=1&order_by=count&pad_counts=1&child_of=' . $parent );
+        $cats = get_terms( array( 'taxonomy' => $taxonomy, 'hide_empty' => 1, 'order_by' => 'count', 'pad_counts' => 1, 'child_of' => $parent ) );
 		foreach ( $cats as $obj ) {
 			$url = get_term_link( $obj->slug, $taxonomy );
 			$country = $country_list[$obj->term_id];
 			$latlng = $marker_list[$obj->term_id];
+
 			// get adjusted latlng from MapMyPostsGeography if no existing latlng or if antarctica
 			if ( ( $country && !$latlng ) || ( $country == 'AQ' ) ) {
 				// use MapMyPostsGeography if we need the latlng
