@@ -57,3 +57,5 @@ More information is available at the [Map My Posts guide](http://www.aroundthisw
 = 1.0.2 = Included POT file for plugin translation.
 = 1.0.1 = Removed assets directory from plugin package to reduce filesize.
 = 1.0 = Initial public release.
+
+Personal fixes by https://www.mister-wp.com/ tested on https://www.easyhoster.com/ hosting.
