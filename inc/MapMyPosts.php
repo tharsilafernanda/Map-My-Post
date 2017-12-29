@@ -265,7 +265,7 @@ class MapMyPosts {
 		if (self::$geochartcount) {
 ?>
 <script type="text/javascript">
-	google.load("visualization", "1", {packages: ["geochart"]}, {other_params: 'key=ADD YOUR KEY HERE'});
+	google.load("visualization", "1", {packages: ["geochart"]}, {other_params: 'key=YOUR_GOOGLE_API_ID_HERE'});
 	<?php for ($i=1; $i<=self::$geochartcount; $i++): ?>
 	google.setOnLoadCallback(MMPGeochart<?php echo $i; ?>);
 	<?php endfor; ?>
@@ -276,7 +276,7 @@ class MapMyPosts {
 		if (self::$gmapcount) {
 ?>
 <script type="text/javascript">
-	google.load('maps', '3', {other_params: 'sensor=false&key=ADD YOUR KEY HERE'});
+	google.load('maps', '3', {other_params: 'sensor=false&key=YOUR_GOOGLE_API_ID_HERE'});
 	<?php for ($i=1; $i<=self::$gmapcount; $i++): ?>
 	google.setOnLoadCallback(MMPGmap<?php echo $i; ?>);
 	<?php endfor; ?>
@@ -692,3 +692,4 @@ class MapMyPosts {
 	}
 	
 } // end of MapMyPosts class
+
